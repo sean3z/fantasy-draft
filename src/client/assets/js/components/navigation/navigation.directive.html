@@ -1,13 +1,19 @@
-<nav class="top-bar">
-	<ul class="title-area">
-		<li class="name">
-			<h1><a href="#">PWFantasy Draft</a></h1>
-		</li>
-	</ul>
-
-	<section class="top-bar-section">
-		<ul class="right">
-			<li class="active"><a href="#">{{navigationCtrlVm.Username}}</a></li>
-		</ul>
-	</section>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Fantasy Draft</a>
+        </div>
+        
+        <div class="collapse navbar-collapse">
+            <p class="navbar-text navbar-right">
+                <span ng-if="navigationCtrlVm.username">
+                    Signed in as <a href="#">{{navigationCtrlVm.username}}</a>
+                </span>
+                
+                <span ng-if="!navigationCtrlVm.username">
+                    <a href="#">Login</a> or <a href="#">Register</a>
+                </span>
+            </p>
+        </div>
+    </div>
 </nav>
