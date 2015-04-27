@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="fda">
 <head>
-	<title>Fantasy Draft Application</title>
+	<title>Fantasy Draft</title>
 	<link href="assets/css/draft.css" rel="stylesheet">
     
     <!-- bower:css -->
     <!-- endbower -->
 </head>
 <body>
-	<navigation></navigation>
+    <div class="container">
+        <navigation></navigation>
 
-	<div class="row">
-		<div class="large-12 column" ui-view>
-		</div>
-	</div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div ui-view>
+                    Draft has not yet begun. Please check back momentarily<br />
+                    <small><i>No need to refresh! Once it starts, we'll automatically update the page!</i></small>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- bower:js -->
     <!-- endbower -->
@@ -21,9 +27,16 @@
     <script type="text/javascript" src="assets/js/app.js"></script>
     <script type="text/javascript" src="assets/js/templates.js"></script>
     
-    <script type="text/javascript" src="assets/js/components/navigation/navigation.module.js"></script>
-    <script type="text/javascript" src="assets/js/components/navigation/navigation.directive.js"></script>
     <script type="text/javascript" src="assets/js/services/user/user.module.js"></script>
     <script type="text/javascript" src="assets/js/services/user/user.service.js"></script>
+    
+    <script type="text/javascript" src="assets/js/pages/draft/draft.module.js"></script>
+    <script type="text/javascript" src="assets/js/pages/draft/draft.controller.js"></script>
+    
+    <script type="text/javascript" src="assets/js/components/navigation/navigation.module.js"></script>
+    <script type="text/javascript" src="assets/js/components/navigation/navigation.directive.js"></script>
+    
+    <script type="text/javascript" src="assets/js/components/round-timer/round-timer.module.js"></script>
+    <script type="text/javascript" src="assets/js/components/round-timer/round-timer.directive.js"></script>
 </body>
 </html>
