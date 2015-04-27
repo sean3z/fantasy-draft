@@ -1,6 +1,6 @@
 (function () {
 	'use strict';
 
-	angular.module('navigation', []);
+	angular.module('navigation', ['User']);
 
 })();
