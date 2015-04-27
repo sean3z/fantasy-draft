@@ -10,18 +10,17 @@
 			restrict: 'E',
 			templateUrl: 'components/navigation/navigation.directive.html',
 			controller: NavigationCtrl,
-			controllerAs: 'navigationCtrlVm',
-			scope: {
-				session: '='
-			}
+			controllerAs: 'navigationCtrlVm'
 		};
 	}
 
-	function NavigationCtrl($scope) {
+    NavigationCtrl.$inject = ['UserService'];
+	function NavigationCtrl(User) {
 		var vm = this;
-        var session = $scope.session;
-
-		vm.username = session.username;
+        
+        if (User.isLoggedIn()) {
+            vm.username = User.username;
+        }
 	}
 
 })();
