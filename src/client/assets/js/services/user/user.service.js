@@ -7,7 +7,10 @@
 
 	function User() {
 		return {
-			username: 'Sean'
+			username: 'Sean',
+            isLoggedIn: function() {
+                return true;
+            }
 		};
 	}
 
