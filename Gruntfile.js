@@ -54,13 +54,13 @@ module.exports = function(grunt) {
         
         watch: {
             files: ['src/**'],
-            tasks: ['copy', 'wiredep:development', 'ngtemplates', 'less:development']
+            tasks: ['copy', 'less:development', 'ngtemplates', 'wiredep:development']
         },
         
         ngtemplates: {
             fda: {
                 cwd: 'src/client/assets/js/',
-                src: ['components/**/*.html'],
+                src: ['**/*.html'],
                 dest: 'dist/client/assets/js/templates.js'
             }
         },
