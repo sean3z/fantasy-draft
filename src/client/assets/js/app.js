@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-        .module('fda', ['ui.router', 'navigation'])
+        .module('fda', ['ui.router', 'navigation', 'draft'])
         .config(configuration);
     
     configuration.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -10,6 +10,13 @@
         $state
             .state('index', {
                 url: '/index'
+            })
+        
+            .state('draft', {
+                url: '/draft',
+                controller: 'DraftCtrl',
+                controllerAs: 'DraftCtrlVm',
+                templateUrl: 'pages/draft/draft.page.html'
             });
         
         $urlRouter.otherwise('/index');
