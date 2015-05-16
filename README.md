@@ -1,5 +1,6 @@
-=== Fantasy Draft Application ===
+### Fantasy Draft
+Node fantasy draft application.
 
-== Instructions ==
+#### Instructions
 * npm install && bower install
 * grunt serve
